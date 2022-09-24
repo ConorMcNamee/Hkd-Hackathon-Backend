@@ -16,3 +16,6 @@ def monthly_spend():
     pass
 
     # return firstname
+
+def see_fraud_transactions():
+    pass

@@ -7,6 +7,9 @@ def init_db():
     connection = sqlite3.connect('database.db')
     print("Connetion opened")
 
+    with open('schema.sql') as f:
+        pass
+
     # Populating the database with data
     
     connection.commit()

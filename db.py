@@ -1,8 +1,21 @@
 import sqlite3
-from flask import Flask, g
+import click
+from flask import Flask, g, current_app
+
 
 def init_db():
-    pass
+    connection = sqlite3.connect('database.db')
+    print("Connetion opened")
+
+    # Populating the database with data
     
-def close_db():
-    pass
+    connection.commit()
+    connection.close()
+
+    print("DB Initialised!")
+
+def get_db_connection():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row
+    return conn
+

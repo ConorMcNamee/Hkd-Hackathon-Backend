@@ -2,8 +2,6 @@ import os
 
 from flask import Flask, Blueprint, request
 
-
-
 def create_app():
     app = Flask(__name__)
 
